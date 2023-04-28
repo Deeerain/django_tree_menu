@@ -1,0 +1,10 @@
+{% if menu_tree %}
+{{ current_url }}
+<nav id="{{ menu_tree.name }}">
+    <ul>
+        {% for item in menu_tree.root_nodes %}
+        {% include 'menu/menu_item.html' with node=item %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
