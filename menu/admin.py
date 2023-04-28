@@ -5,7 +5,7 @@ from .models import Menu, MenuItem
 class MenuItemInline(admin.TabularInline):
     model = MenuItem
     ordering = ('item_parent',)
-    extra = 1
+    extra = 0
 
 
 @admin.register(Menu)

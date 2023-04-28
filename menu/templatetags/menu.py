@@ -30,7 +30,9 @@ class MenuNode:
 
     @property
     def url(self) -> str:
-        return reverse_url(self._url)
+        url = reverse_url(self._url)
+
+        return url
 
     def set_active(self) -> None:
         self.collapse = False

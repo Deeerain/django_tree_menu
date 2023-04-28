@@ -28,7 +28,7 @@ class AbstractMenuItemBase(models.Model):
         return getattr(self, self.URL_FIELD)
 
     def __str__(self) -> str:
-        return self.url
+        return getattr(self, self.TITLE_FIELD)
 
     class Meta:
         abstract = True

@@ -3,7 +3,7 @@
 {% if not node.collapse %}
 <ul>
     {% for item in node.childrens %}
-    {% include 'menu_item.html' with node=item %}
+    {% include 'menu/menu_item.html' with node=item %}
     {% endfor %}
 </ul>
 {% endif %}
