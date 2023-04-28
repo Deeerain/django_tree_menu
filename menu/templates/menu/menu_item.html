@@ -1,0 +1,9 @@
+<li><a href="{{ node.url }}">{{ node.title }}</a></li>
+
+{% if not node.collapse %}
+<ul>
+    {% for item in node.childrens %}
+    {% include 'menu/menu_item.html' with node=item %}
+    {% endfor %}
+</ul>
+{% endif %}
