@@ -1,7 +1,5 @@
-from django.shortcuts import render
+from django.views import generic
 
 
-def index(request, menu_name=None, menu_item_title=None):
-    return render(request, 'index.html',
-                  context={'menu_name': menu_name,
-                           'menu_item_title': menu_item_title})
+class HomePageView(generic.TemplateView):
+    template_name = 'index.html'

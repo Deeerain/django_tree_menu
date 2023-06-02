@@ -1,9 +1,7 @@
-{% if menu_tree %}
-<nav id="{{ menu_tree.name }}">
+<nav>
     <ul>
-        {% for item in menu_tree.root_nodes %}
+        {% for item in menu_items %}
         {% include 'menu/menu_item.html' with node=item %}
         {% endfor %}
     </ul>
 </nav>
-{% endif %}
