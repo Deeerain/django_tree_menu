@@ -1,9 +1,7 @@
-<li><a href="{{ node.url }}">{{ node.title }}</a></li>
+<li><a href="{{ node.item_url }}">{{ node.item_title }}</a></li>
 
-{% if not node.collapse %}
 <ul>
-    {% for item in node.childrens %}
+    {% for item in node.parents.all %}
     {% include 'menu/menu_item.html' with node=item %}
     {% endfor %}
 </ul>
-{% endif %}
